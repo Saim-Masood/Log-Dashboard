@@ -6,8 +6,8 @@ const Dashboard = ({ onLogout }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    onLogout(); // Clear login status
-    navigate('/login'); // Redirect to login page
+    onLogout(); 
+    navigate('/login'); 
   };
 
   return (
@@ -15,14 +15,14 @@ const Dashboard = ({ onLogout }) => {
       <AppBar position="static" color="primary" sx={{ width: '100vw' }}>
         <Toolbar
           sx={{
-            flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on extra small screens
-            alignItems: { xs: 'center', sm: 'stretch' }, // Center vertically on small screens
-            textAlign: { xs: 'center', sm: 'left' }, // Center text on extra small screens
+            flexDirection: { xs: 'column', sm: 'row' }, 
+            alignItems: { xs: 'center' }, 
+            textAlign: { xs: 'center'}, 
           }}
         >
           <Typography
             variant="h6"
-            sx={{ flexGrow: 1, fontSize: { xs: '1.5rem', sm: '2rem' } }} // Responsive font size
+            sx={{ flexGrow: 1, fontSize: { xs: '1.5rem', sm: '2rem' } }}
           >
             Dashboard
           </Typography>
@@ -35,7 +35,6 @@ const Dashboard = ({ onLogout }) => {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        height="calc(100vh - 64px)" // Adjust for AppBar height
         sx={{ padding: 2, backgroundColor: '#f5f5f5' }}
       >
         <Typography variant="h4" color="textPrimary" sx={{ fontSize: { xs: '2rem', sm: '3rem' } }}>
